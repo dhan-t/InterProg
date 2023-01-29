@@ -74,6 +74,18 @@ public class ToH {
                 // With powerOf variable, it ensures that it updates as per the user input.
                 System.out.println("\nWhy did it have " + powerOf + " moves?");
                 System.out.println("Because the amount of moves is to be determined by 2^n-1 or 2 to the power of 'n'/amount of disks, minus 1");
+                
+                FileWriter fw = new FileWriter("TowerOfHanoi_Results.txt");
+                BufferedWriter bw = new BufferedWriter(fw);
+
+                // Writes to the file the number of disks and moves made.
+                bw.write("Number of disks: " + numDisk + "\n");
+                bw.write("Number of moves made: " + movesMade + "\n");
+                bw.write("Formula: 2^n - 1: " + powerOf + " moves" + "\n");
+                
+                // Closes the file.
+                bw.close();
+
         }
 
         // Recursive method
