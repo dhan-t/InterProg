@@ -1,4 +1,4 @@
-/**
+/*
  * 
  * TOH.java
  * 
@@ -60,32 +60,31 @@ public class ToH {
                 // numDisk variable.
                 int numDisk = sc.nextInt();
 
-                // Prints out that this is the solution to a numDisk ammount of disk ToH.
+                // Prints the line below, factoring user input.
                 System.out.println("\nThe solution to a " + numDisk + " disk TOH is:");
 
                 // Calls the "towerOfHanoi" method
                 towerOfHanoi(numDisk, 'A', 'B', 'C');
-                sc.close();
-
-                // For printing below.
+                
+                // Prints out the solution as to how many moves one needs to make to solve ToH.
                 double powerOf = (Math.pow(2, numDisk) - 1);
-
-                // Prints out why the program took that ammount of steps.
-                // With powerOf variable, it ensures that it updates as per the user input.
                 System.out.println("\nWhy did it have " + powerOf + " moves?");
+
+                // Prints out the formula in the terminal for users to see.
                 System.out.println("Because the amount of moves is to be determined by 2^n-1 or 2 to the power of 'n'/amount of disks, minus 1");
                 
                 FileWriter fw = new FileWriter("TowerOfHanoi_Results.txt");
                 BufferedWriter bw = new BufferedWriter(fw);
 
-                // Writes to the file the number of disks and moves made.
+                // Writing into a txt file in the same folder.
                 bw.write("Number of disks: " + numDisk + "\n");
                 bw.write("Number of moves made: " + movesMade + "\n");
                 bw.write("Formula: 2^n - 1: " + powerOf + " moves" + "\n");
                 
                 // Closes the file.
                 bw.close();
-
+                // Closes the scanner.
+                sc.close();
         }
 
         // Recursive method
@@ -93,18 +92,12 @@ public class ToH {
 
                 if (numDisk == 1) {
 
-                        // Prints out normally at first run, disk 1 from rod[A] to rod[C]
-
                         System.out.println("<" + movesMade + "> Move disk (1) from rod [" + rodA + "] to rod {"+ rodC + "}");
 
-                        // movesMade is the variable for the moves that has been made.
-                        // It increases every print, counting the moves / prints the program has made.
+                        // movesMade is the variable used to track how many moves has been made, this is for readabilty.
                         movesMade++;
 
                 } else {
-                        // If numDisk != 1, towerOfHanoi method is called again, until numDisk == 1.
-                        // numDisk == 1? It prints what's in the if{}.
-                        // Also rod[C] and rod[B] are switched places.
                         towerOfHanoi(numDisk - 1, rodA, rodC, rodB);
 
                         // Prints out based on the variable change. from rod[A] to rod[C] in the code, but in print it is [B].
