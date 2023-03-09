@@ -1,0 +1,18 @@
+Created by:
+Basilio, John Angelo
+Tamparong, Dhan Micheal
+
+For Intermediate programming subject during our freshman second semester. 
+March 7, 2023)
+
+Insctructions:
+
+LOGIN FEATURE LIST (You are expected to finish the exam within our Class Schedule)
+-LOGIN SUCCESSFUL and INCORPORATE OTHER FEATURE FOR PASSWORD TEXT FIELD (VISIBILITY OF PASSWORD or---
+ STRONG PASSWORD for Greater Protection or FORMAT SENSITIVITY or Display Helpful Error Messages)(20PTS)
+-REGISTRATION/SIGN UP FEATURE (15 PTS)
+-REMEMBER ME (15 PTS)
+-FORGOT PASSWORD FUNCTIONALITY (15 PTS)
+
+OTHER FEATURE RELATED TO LOGIN AND CONNECT IT TO THE NEXT FORM THE ENROLLMENT PAGE FOLLOW THE
+GUIDELINE OF THE DISCOUNT SYSTEM AND CREATE APPROPRIATE USER INTERFACE TO THE GIVEN TEST CASES (10 PTS-30 PTS). Depends on the Complexity of Added Feature
