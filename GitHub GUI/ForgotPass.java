@@ -39,29 +39,29 @@ public class ForgotPass {
 		frame.getContentPane().setLayout(null);
 		
 		
-		JLabel lblEmailOrUsername = new JLabel("Email Address");
-		lblEmailOrUsername.setFont(new Font("Fira Code", Font.BOLD, 12));
+		JLabel lblEmailOrUsername = new JLabel("Enter Email Address");
+		lblEmailOrUsername.setFont(new Font("Consolas", Font.BOLD, 12));
 		lblEmailOrUsername.setForeground(Color.WHITE);
-		lblEmailOrUsername.setBounds(29, 72, 126, 14);
+		lblEmailOrUsername.setBounds(63, 70, 139, 20);
 		frame.getContentPane().add(lblEmailOrUsername);
 		
 		
 		JLabel lblForgotPass = new JLabel("Forgot Password");
 		lblForgotPass.setHorizontalAlignment(SwingConstants.CENTER);
 		lblForgotPass.setForeground(Color.WHITE);
-		lblForgotPass.setFont(new Font("Fira Code", Font.BOLD, 15));
-		lblForgotPass.setBounds(29, 11, 414, 26);
+		lblForgotPass.setFont(new Font("Consolas", Font.BOLD, 15));
+		lblForgotPass.setBounds(28, 33, 414, 26);
 		frame.getContentPane().add(lblForgotPass);
 		
 		txtEmailOrUsername = new JTextField();
-		txtEmailOrUsername.setFont(new Font("Fira Code", Font.PLAIN, 12));
-		txtEmailOrUsername.setBounds(165, 70, 234, 20);
+		txtEmailOrUsername.setFont(new Font("Consolas", Font.BOLD, 12));
+		txtEmailOrUsername.setBounds(201, 70, 198, 20);
 		frame.getContentPane().add(txtEmailOrUsername);
 		txtEmailOrUsername.setColumns(10);
 		
 		JButton btnSubmit = new JButton("Submit");
-		btnSubmit.setFont(new Font("Fira Code", Font.PLAIN, 12));
-		btnSubmit.setBounds(165, 125, 89, 23);
+		btnSubmit.setFont(new Font("Consolas", Font.BOLD, 12));
+		btnSubmit.setBounds(201, 112, 90, 20);
 		btnSubmit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String emailOrUsername = txtEmailOrUsername.getText();
@@ -73,8 +73,8 @@ public class ForgotPass {
 		frame.getContentPane().add(btnSubmit);
 		
 		JButton btnCancel = new JButton("Cancel");
-		btnCancel.setFont(new Font("Fira Code", Font.PLAIN, 12));
-		btnCancel.setBounds(310, 125, 89, 23);
+		btnCancel.setFont(new Font("Consolas", Font.BOLD, 12));
+		btnCancel.setBounds(309, 112, 90, 20);
 		btnCancel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
@@ -82,7 +82,7 @@ public class ForgotPass {
 		});
 		frame.getContentPane().add(btnCancel);
 		
-		frame.setBounds(100, 100, 502, 225);
+		frame.setBounds(100, 100, 502, 206);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.setVisible(true);
 		Image img = new ImageIcon(this.getClass().getResource("SMALLGITHUB.jpg")).getImage();
