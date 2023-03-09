@@ -45,11 +45,11 @@ public class HomeScreenGitHub {
 		frame.getContentPane().add(panelRepoLinks);
 		panelRepoLinks.setLayout(null);
 		
-		JLabel lblNewLabel_1 = new JLabel("Repositories:");
-		lblNewLabel_1.setFont(new Font("Fira Code", Font.BOLD, 14));
-		lblNewLabel_1.setForeground(new Color(255, 255, 255));
-		lblNewLabel_1.setBounds(10, 23, 108, 14);
-		panelRepoLinks.add(lblNewLabel_1);
+		JLabel lblRepos = new JLabel("Repositories:");
+		lblRepos.setFont(new Font("Fira Code", Font.BOLD, 14));
+		lblRepos.setForeground(new Color(255, 255, 255));
+		lblRepos.setBounds(10, 23, 108, 14);
+		panelRepoLinks.add(lblRepos);
 		
 		JLabel lblNewLabel = new JLabel("New label");
 		lblNewLabel.setBounds(-336, -156, 464, 668);
