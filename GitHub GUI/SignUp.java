@@ -38,27 +38,12 @@ private	boolean passwordVisible = false;
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lblIUserNameLabel = new JLabel("Username");
-		lblIUserNameLabel.setFont(new Font("Fira Code", Font.BOLD, 14));
+		lblIUserNameLabel.setFont(new Font("Monospaced", Font.BOLD, 12));
 		lblIUserNameLabel.setForeground(new Color(255, 255, 255));
 		lblIUserNameLabel.setBounds(184, 155, 109, 14);
 		frame.getContentPane().add(lblIUserNameLabel);
 		
 		textUsernameField = new JTextField();
-		textUsernameField.addFocusListener(new FocusAdapter() {
-			@Override
-			public void focusGained(FocusEvent e) {
-				if (textUsernameField.getText().equals("Username")) {
-					textUsernameField.setText("");
-				} else {
-					textUsernameField.selectAll();
-				}
-			}
-			@Override
-			public void focusLost(FocusEvent e) {
-				if(textUsernameField.getText().equals(""))
-					textUsernameField.setText("Username");
-			}
-		});
 		textUsernameField.setBounds(184, 172, 206, 20);
 		frame.getContentPane().add(textUsernameField);
 		textUsernameField.setColumns(10);
@@ -66,33 +51,18 @@ private	boolean passwordVisible = false;
 		JLabel lblEmailSignUp = new JLabel("Email");
 		
 		lblEmailSignUp.setForeground(Color.WHITE);
-		lblEmailSignUp.setFont(new Font("Fira Code", Font.BOLD, 14));
+		lblEmailSignUp.setFont(new Font("Monospaced", Font.BOLD, 12));
 		lblEmailSignUp.setBounds(184, 203, 109, 14);
 		frame.getContentPane().add(lblEmailSignUp);
 		
 		textEmailSignUp = new JTextField();
-		textEmailSignUp.addFocusListener(new FocusAdapter() {
-			@Override
-			public void focusGained(FocusEvent e) {
-				if (textEmailSignUp.getText().equals("Email")) {
-					textEmailSignUp.setText("");
-				} else {
-					textEmailSignUp.selectAll();
-				}
-			}
-			@Override
-			public void focusLost(FocusEvent e) {
-				if(textEmailSignUp.getText().equals(""))
-					textEmailSignUp.setText("Email");
-			}
-		});
 		textEmailSignUp.setColumns(10);
 		textEmailSignUp.setBounds(184, 220, 206, 20);
 		frame.getContentPane().add(textEmailSignUp);
 		
 		JLabel lblPasswordSignUp = new JLabel("Password");
 		lblPasswordSignUp.setForeground(Color.WHITE);
-		lblPasswordSignUp.setFont(new Font("Fira Code", Font.BOLD, 14));
+		lblPasswordSignUp.setFont(new Font("Monospaced", Font.BOLD, 12));
 		lblPasswordSignUp.setBounds(184, 251, 109, 14);
 		frame.getContentPane().add(lblPasswordSignUp);
 		
@@ -111,14 +81,14 @@ private	boolean passwordVisible = false;
 				}}
 			});
 		btnSignUp.setForeground(new Color(255, 255, 255));
-		btnSignUp.setFont(new Font("Fira Code", Font.BOLD, 12));
+		btnSignUp.setFont(new Font("Monospaced", Font.BOLD, 12));
 		btnSignUp.setBackground(new Color(0, 166, 0));
-		btnSignUp.setBounds(184, 324, 206, 23);
+		btnSignUp.setBounds(185, 306, 206, 23);
 		frame.getContentPane().add(btnSignUp);
 		
 	
 		JButton btnSignIn = new JButton("Sign In");
-		btnSignIn.setFont(new Font("Fira Code", Font.BOLD, 12));
+		btnSignIn.setFont(new Font("Monospaced", Font.BOLD, 12));
 		btnSignIn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -128,14 +98,14 @@ private	boolean passwordVisible = false;
 			}
 		});
 		btnSignIn.setBackground(new Color(192, 192, 192));
-		btnSignIn.setBounds(317, 358, 85, 23);
+		btnSignIn.setBounds(242, 375, 92, 23);
 		frame.getContentPane().add(btnSignIn);
 		
 		JLabel lblWithAccount = new JLabel("Already have an Account?");
 		lblWithAccount.setHorizontalAlignment(SwingConstants.CENTER);
 		lblWithAccount.setForeground(new Color(255, 255, 255));
-		lblWithAccount.setFont(new Font("Fira Code", Font.BOLD, 12));
-		lblWithAccount.setBounds(149, 362, 171, 14);
+		lblWithAccount.setFont(new Font("Monospaced", Font.BOLD, 12));
+		lblWithAccount.setBounds(184, 357, 206, 14);
 		frame.getContentPane().add(lblWithAccount);
 		
 		passwordField = new JPasswordField();
@@ -162,8 +132,8 @@ private	boolean passwordVisible = false;
 		JLabel lblSignUp = new JLabel("Welcome to GitHub!");
 		lblSignUp.setHorizontalAlignment(SwingConstants.CENTER);
 		lblSignUp.setForeground(Color.WHITE);
-		lblSignUp.setFont(new Font("Fira Code", Font.BOLD, 15));
-		lblSignUp.setBounds(184, 124, 206, 20);
+		lblSignUp.setFont(new Font("Monospaced", Font.BOLD, 16));
+		lblSignUp.setBounds(184, 100, 206, 44);
 		frame.getContentPane().add(lblSignUp);
 		
 		JRadioButton rdbtnShowPass = new JRadioButton("");
@@ -178,11 +148,7 @@ private	boolean passwordVisible = false;
 		rdbtnShowPass.setHorizontalAlignment(SwingConstants.LEFT);
 		rdbtnShowPass.setBounds(370, 268, 20, 20);
 		frame.getContentPane().add(rdbtnShowPass);
-		JLabel lblNewLabel = new JLabel("Please Input all Fields!");
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setForeground(new Color(255, 255, 255));
-		lblNewLabel.setBounds(184, 299, 206, 14);
-		frame.getContentPane().add(lblNewLabel);
+		
 
 		frame.setBounds(100, 100, 600, 600);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
