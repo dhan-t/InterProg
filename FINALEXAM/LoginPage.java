@@ -175,9 +175,9 @@ public class LoginPage {
 					
 				}
 				//checks if the user didn't fill all fields
-				else if (txtUsername.getText().equals("") || txtUsername.getText().equals("Username")) {
+				else if (!(txtUsername.getText().equals(adminU)) && pwdPassword.getText().equals(adminP)) {
 					lblLoginMessage.setText("INCORECT STUDENT USERNAME");
-				} else if (pwdPassword.getText().equals("") || pwdPassword.getText().equals("Password")) {
+				} else if (txtUsername.getText().equals(adminU) || txtUsername.getText().equals("") && pwdPassword.getText().equals("") || pwdPassword.getText().equals("Password")) {
 					lblLoginMessage.setText("INCORRECT PASSWORD");
 				} else if (!(txtUsername.getText().equals(adminU)) || (!(pwdPassword.getText().equals(adminP)))) {
 					lblLoginMessage.setText("INCORRECT USERNAME AND PASSWORD");
