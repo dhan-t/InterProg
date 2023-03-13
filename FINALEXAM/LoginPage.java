@@ -169,7 +169,7 @@ public class LoginPage {
 					lblLoginMessage.setText("");
 					JOptionPane.showMessageDialog(null, "SUCCESSFULLY LOGIN");
 					
-					HomeScreenGitHub window2 = new HomeScreenGitHub();
+					HomeScreen window2 = new HomeScreen();
 					window2.frame.setVisible(true);
 					frame.dispose();
 					
