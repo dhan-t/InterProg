@@ -1,6 +1,7 @@
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
+import java.util.ArrayList;
 
 public class LoginPage {
 
@@ -35,6 +36,10 @@ public class LoginPage {
 	/**
 	 * Initialize the contents of the frame.
 	 */
+	
+	
+	String adminU = "Admin-Java";
+	String adminP = "AdminJava123";
 	boolean passwordVisible = false;
 	private JLabel lblLoginMessage = new JLabel("");
 	private void initialize() {
@@ -127,7 +132,7 @@ public class LoginPage {
 		});
 		frame.getContentPane().add(btnSingUP);
 		
-		JLabel lblNewLabel_1 = new JLabel("New to GitHub?");
+		JLabel lblNewLabel_1 = new JLabel("New  t ");
 		lblNewLabel_1.setFont(new Font("Fira Code", Font.PLAIN, 12));
 		lblNewLabel_1.setBounds(184, 398, 119, 17);
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
@@ -159,7 +164,7 @@ public class LoginPage {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				//if user inputs are correct
-				if(txtUsername.getText().equals("DhanAngelo") && pwdPassword.getText().equals("BasilioTamparong123")) {
+				if(txtUsername.getText().equals(adminU) && pwdPassword.getText().equals(adminP)) {
 					lblLoginMessage.setText("");
 					JOptionPane.showMessageDialog(null, "SUCCESSFULLY LOGIN");	
 				}
@@ -168,8 +173,10 @@ public class LoginPage {
 					lblLoginMessage.setText("INCORECT STUDENT USERNAME");
 				} else if (pwdPassword.getText().equals("") || pwdPassword.getText().equals("Password")) {
 					lblLoginMessage.setText("INCORRECT PASSWORD");
+				} else if (!(txtUsername.getText().equals(adminU)) || (!(pwdPassword.getText().equals(adminP)))) {
+					lblLoginMessage.setText("INCORRECT USERNAME AND PASSWORD");
 				}
-				}
+			}
 			});
 		pnlBtnLogin.setBackground(new Color(0, 166, 0));
 		pnlBtnLogin.setBounds(184, 300, 200, 28);
