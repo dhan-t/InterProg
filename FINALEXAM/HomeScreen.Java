@@ -3,7 +3,7 @@ package longExam3;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
-public class HomeScreenGitHub {
+public class HomeScreen {
 
 	JFrame frame;
 
@@ -14,7 +14,7 @@ public class HomeScreenGitHub {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					HomeScreenGitHub window = new HomeScreenGitHub();
+					HomeScreen window = new HomeScreen();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -26,7 +26,7 @@ public class HomeScreenGitHub {
 	/**
 	 * Create the application.
 	 */
-	public HomeScreenGitHub() {
+	public HomeScreen() {
 		initialize();
 	}
 
