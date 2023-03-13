@@ -51,7 +51,7 @@ public class LoginPage {
 			String currentLine;
 			
 			if((currentLine = readAdmin.readLine()) == null) {
-				writePredefinedAdmin.write("Admin-Java\nAdminJava123");
+				writePredefinedAdmin.write("Admin-Java\nAdminJava123");		// predefined admin credentials
 				writePredefinedAdmin.close();
 			} else {
 				adminList.add(currentLine.split("\n"));
