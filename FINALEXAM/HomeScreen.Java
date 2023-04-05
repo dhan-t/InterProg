@@ -1,5 +1,3 @@
-package longExam3;
-
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -48,7 +46,7 @@ public class HomeScreen extends ending{
 	private void initialize() {
 		
 		frame = new JFrame();
-		frame.getContentPane().setBackground(new Color(9, 9, 9));
+		frame.getContentPane().setBackground(new Color(20, 20, 20));
 		frame.getContentPane().setLayout(null);
 		
 		JSeparator separator = new JSeparator();
@@ -62,28 +60,27 @@ public class HomeScreen extends ending{
 		lblNewLabel.setBounds(0, 11, 584, 49);
 		frame.getContentPane().add(lblNewLabel);
 		
-		
-		JCheckBox chckbxjohnYap = new JCheckBox("John Yap");
+		final JCheckBox chckbxjohnYap = new JCheckBox("John Yap");
 		chckbxjohnYap.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		chckbxjohnYap.setBounds(165, 136, 244, 23);
 		frame.getContentPane().add(chckbxjohnYap);
 		
-		JCheckBox chckbxkrishaCruz = new JCheckBox("Krisha Cruz");
+		final JCheckBox chckbxkrishaCruz = new JCheckBox("Krisha Cruz");
 		chckbxkrishaCruz.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		chckbxkrishaCruz.setBounds(165, 162, 244, 23);
 		frame.getContentPane().add(chckbxkrishaCruz);
 		
-		JCheckBox chckbxhenryGo = new JCheckBox("Henry Go");
+		final JCheckBox chckbxhenryGo = new JCheckBox("Henry Go");
 		chckbxhenryGo.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		chckbxhenryGo.setBounds(165, 188, 244, 23);
 		frame.getContentPane().add(chckbxhenryGo);
 		
-		JCheckBox chckbxHaileyDaily = new JCheckBox("Hailey Daily");
+		final JCheckBox chckbxHaileyDaily = new JCheckBox("Hailey Daily");
 		chckbxHaileyDaily.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		chckbxHaileyDaily.setBounds(165, 214, 244, 23);
 		frame.getContentPane().add(chckbxHaileyDaily);
 		
-		JCheckBox chckbxAshtonDrake = new JCheckBox("Ashton Drake");
+		final JCheckBox chckbxAshtonDrake = new JCheckBox("Ashton Drake");
 		chckbxAshtonDrake.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		chckbxAshtonDrake.setBounds(165, 240, 244, 23);
 		frame.getContentPane().add(chckbxAshtonDrake);
@@ -96,16 +93,26 @@ public class HomeScreen extends ending{
 				if(chckbxhenryGo.isSelected()||chckbxkrishaCruz.isSelected()||chckbxjohnYap.isSelected()) {
 					JOptionPane.showMessageDialog(null, "PLEASE REVIEW THE RESULTS AGAIN");
 			
-				}else if (chckbxHaileyDaily.isSelected() && chckbxAshtonDrake.isSelected()){
-					JOptionPane.showMessageDialog(null, "Here's the list of students who passed the subject Hailey Daily and Ashton Drake");
+				}else if(chckbxHaileyDaily.isSelected()) {
+					JOptionPane.showMessageDialog(null, "Here's the list of student(s) who passed the subject Hailey Daily");
 					ending window3 = new ending();
 					window3.frame.setVisible(true);
 					frame.dispose();
 					
+				}else if (chckbxAshtonDrake.isSelected()){
+					JOptionPane.showMessageDialog(null, "Here's the list of student(s) who passed the subject Ashton Drake");
+					ending window3 = new ending();
+					window3.frame.setVisible(true);
+					frame.dispose();
+				
+				}else if (chckbxHaileyDaily.isSelected() || chckbxAshtonDrake.isSelected()){
+					JOptionPane.showMessageDialog(null, "Here's the list of student(s) who passed the subject Hailey Daily and Ashton Drake");
+					ending window3 = new ending();
+					window3.frame.setVisible(true);
+					frame.dispose();					
 					
 				}else {
-					checkboxCorrect = false;
-					
+					checkboxCorrect = false;			
 					ending window3 = new ending();
 					window3.frame.setVisible(true);
 					frame.dispose();
@@ -117,10 +124,7 @@ public class HomeScreen extends ending{
 		btnNewButton.setBounds(186, 505, 205, 23);
 		frame.getContentPane().add(btnNewButton);
 		
-		
 		JOptionPane.showMessageDialog(null, "WELCOME USER");
-		
-		
 		
 	}
 }
