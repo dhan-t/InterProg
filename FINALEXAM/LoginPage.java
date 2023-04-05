@@ -1,4 +1,3 @@
-package longExam3;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -39,7 +38,7 @@ public class LoginPage {
 	 * Initializes the contents of the frame.
 	 */
 	
-//Instantiation of the variables for comparisson to check if the variables are the same.	
+//Instantiation of the variables for comparison to check if the variables are the same.	
 	String adminU = "Admin-Java";
 	String adminP = "AdminJava123";
 	boolean passwordVisible = false;
@@ -50,20 +49,20 @@ public class LoginPage {
 	
 		frame = new JFrame();
 		frame.getContentPane().setForeground(new Color(255, 255, 255));
-		frame.getContentPane().setBackground(new Color(255, 255, 255));
+		frame.getContentPane().setBackground(new Color(20, 20, 20));
 		frame.setBounds(100, 100, 600, 600);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lblEmailorPhone = new JLabel("USERNAME:");
-		lblEmailorPhone.setBounds(90, 164, 182, 14);
-		lblEmailorPhone.setForeground(new Color(0, 0, 0));
+		lblEmailorPhone.setBounds(90, 183, 182, 14);
+		lblEmailorPhone.setForeground(new Color(255, 255, 255));
 		lblEmailorPhone.setFont(new Font("Fira Code", Font.BOLD, 12));
 		frame.getContentPane().add(lblEmailorPhone);
 		
 		JLabel lblPassword = new JLabel("PASSWORD:");
-		lblPassword.setBounds(90, 229, 84, 14);
-		lblPassword.setForeground(new Color(0, 0, 0));
+		lblPassword.setBounds(90, 221, 84, 14);
+		lblPassword.setForeground(new Color(255, 255, 255));
 		lblPassword.setFont(new Font("Fira Code", Font.BOLD, 12));
 		frame.getContentPane().add(lblPassword);
 		
@@ -87,7 +86,7 @@ public class LoginPage {
 			}
 		});
 		txtUsername.setText("Username");
-		txtUsername.setBounds(184, 161, 202, 20);
+		txtUsername.setBounds(184, 180, 202, 20);
 		txtUsername.setBackground(new Color(255, 255, 255));
 		frame.getContentPane().add(txtUsername);
 		txtUsername.setColumns(10);
@@ -96,8 +95,8 @@ public class LoginPage {
 		lblNewLabel.setBackground(new Color(255, 255, 255));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBounds(186, 110, 200, 43);
-		lblNewLabel.setForeground(new Color(0, 0, 0));
-		lblNewLabel.setFont(new Font("Fira Code", Font.BOLD, 15));
+		lblNewLabel.setForeground(new Color(255, 255, 255));
+		lblNewLabel.setFont(new Font("Dialog", Font.BOLD, 20));
 		frame.getContentPane().add(lblNewLabel);
 		
 		pwdPassword = new JPasswordField();
@@ -125,12 +124,13 @@ public class LoginPage {
 		});
 		pwdPassword.setText("Password");
 		pwdPassword.setEchoChar((char)0);
-		pwdPassword.setBounds(184, 226, 202, 20);
+		pwdPassword.setBounds(184, 218, 182, 20);
 		pwdPassword.setBackground(new Color(255, 255, 255));
 		frame.getContentPane().add(pwdPassword);
 		
 		JRadioButton rdbtnShowPass = new JRadioButton("");
-		rdbtnShowPass.setBackground(new Color(0, 0, 0));
+		rdbtnShowPass.setForeground(new Color(255, 255, 255));
+		rdbtnShowPass.setBackground(new Color(255, 255, 255));
 		rdbtnShowPass.addMouseListener(new MouseAdapter() {
 			
 //Used to show and hide password with the use of radio button.			
@@ -141,7 +141,7 @@ public class LoginPage {
 				    }
 				});
 		rdbtnShowPass.setHorizontalAlignment(SwingConstants.LEFT);
-		rdbtnShowPass.setBounds(383, 226, 20, 20);
+		rdbtnShowPass.setBounds(366, 218, 20, 20);
 		frame.getContentPane().add(rdbtnShowPass);
 		lblLoginMessage.setAlignmentX(Component.CENTER_ALIGNMENT);
 		lblLoginMessage.setBackground(new Color(255, 0, 0));
@@ -151,7 +151,7 @@ public class LoginPage {
 //Used for message on user input errors.		
 		lblLoginMessage.setForeground(new Color(255, 0, 0));
 		lblLoginMessage.setFont(new Font("Arial", Font.BOLD, 12));
-		lblLoginMessage.setBounds(0, 257, 584, 14);
+		lblLoginMessage.setBounds(0, 257, 557, 14);
 		frame.getContentPane().add(lblLoginMessage);
 		
 		btnlogin = new JButton("Login");
@@ -179,22 +179,21 @@ public class LoginPage {
 						}
 					}
 					});
-		btnlogin.setBounds(221, 282, 120, 23);
+		btnlogin.setBounds(220, 282, 120, 23);
 		frame.getContentPane().add(btnlogin);
 		
 		JButton btnNewButton = new JButton("Forgot Password?");
 		btnNewButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				ForgotPass window = new ForgotPass();
-				window.frmForgetPassword.setVisible(true);
+				
 			}
 		});
 		btnNewButton.setFont(new Font("Fira Code", Font.PLAIN, 12));
-		btnNewButton.setForeground(new Color(0, 0, 0));
+		btnNewButton.setForeground(new Color(255, 255, 255));
 		btnNewButton.setBorder(null);
-		btnNewButton.setBackground(new Color(255, 255, 255));
-		btnNewButton.setBounds(225, 328, 119, 23);
+		btnNewButton.setBackground(new Color(20, 20, 20));
+		btnNewButton.setBounds(220, 323, 119, 23);
 		frame.getContentPane().add(btnNewButton);
 	}
 }
